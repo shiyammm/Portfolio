@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+  .flex-between {
+    @apply flex justify-between items-center;
+  }
+}
+
+.hero {
+  background-image: radial-gradient(125% 125% at 50% 0%, #121315 60%, #00ffa2);
+}
+
+.about {
+  background-image: radial-gradient(
+    125% 125% at 50% 100%,
+    #121315 60%,
+    #00ffa2
+  );
+}
