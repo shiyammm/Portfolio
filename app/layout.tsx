@@ -1,8 +1,43 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import localFont from 'next/font/local';
 import './globals.css';
+import Navbar from '@/containers/Navbar';
+import Footer from '@/containers/Footer';
 
-const inter = Inter({ subsets: ['latin'] });
+const acmeFont = localFont({
+  src: '../public/assets/fonts/Acme-Regular.ttf',
+  variable: '--font-acme',
+});
+
+const circularBookFont = localFont({
+  src: '../public/assets/fonts/Circular-Book.ttf',
+  variable: '--font-circular-book',
+});
+const circularMediumFont = localFont({
+  src: '../public/assets/fonts/Circular-Medium.ttf',
+  variable: '--font-circular-medium',
+});
+
+const neueMontrealFont = localFont({
+  src: '../public/assets/fonts/NeueMontreal-Regular.ttf',
+  variable: '--font-neue-montreal',
+});
+const roslindaleDisplayFont = localFont({
+  src: '../public/assets/fonts/RoslindaleDisplay-Regular.ttf',
+  variable: '--font-roslindale-display',
+});
+const gtAlpinaFont = localFont({
+  src: '../public/assets/fonts/GT-Alpina.ttf',
+  variable: '--font-gt-alpina',
+});
+const bebasNeueRegularFont = localFont({
+  src: '../public/assets/fonts/BebasNeue-Regular.ttf',
+  variable: '--font-bebasNeue-regular',
+});
+const canopeeRegularFont = localFont({
+  src: '../public/assets/fonts/Canopee-Regular.otf',
+  variable: '--font-canopee-Regular',
+});
 
 export const metadata: Metadata = {
   title: 'Shiyam Robert - Portfolio',
@@ -16,7 +51,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body
+        className={`
+          ${acmeFont.variable}
+          ${gtAlpinaFont.variable}
+          ${roslindaleDisplayFont.variable}
+          ${neueMontrealFont.variable}
+          ${circularBookFont.variable}
+          ${circularMediumFont.variable} 
+          ${canopeeRegularFont.variable} 
+          ${bebasNeueRegularFont.variable} font-sans`}
+      >
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
