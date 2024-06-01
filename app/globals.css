@@ -22,3 +22,29 @@
     #00ffa2
   );
 }
+.perspective-text {
+  transition: transform 0.75s cubic-bezier(0.76, 0, 0.24, 1);
+  transform: preserve-3d;
+}
+.perspective-text:hover {
+  transform: rotateX(90deg);
+}
+.perspective-text p {
+  transition: transform all 0.75s cubic-bezier(0.76, 0, 0.24, 1);
+}
+.perspective-text p:nth-child(1) {
+  transform: translateY(-100%);
+}
+.perspective-text p:hover:nth-child(1) {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+.perspective-text p:nth-child(2) {
+  position: absolute;
+  transform: rotateX(-90deg);
+  opacity: 0;
+}
+.perspective-text p:hover:nth-child(2) {
+  transform: rotateX(-90deg);
+  opacity: 1;
+}

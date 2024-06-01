@@ -1,4 +1,5 @@
-"use client"
+'use client';
+
 import About from '@/containers/About';
 import Hero from '@/containers/Hero';
 import WhatIUse from '@/containers/WhatIUse';
@@ -7,6 +8,7 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/all';
 import Lenis from 'lenis';
+import Menu from '@/containers/Menu';
 
 export default function Home() {
   useGSAP(() => {
