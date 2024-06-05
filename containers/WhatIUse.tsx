@@ -1,9 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 const WhatIUse = () => {
-  return (
-    <div>WhatIUse</div>
-  )
-}
+  return <section className="w-full h-screen bg-black-1">WhatIUse</section>;
+};
 
-export default WhatIUse
+export default WhatIUse;

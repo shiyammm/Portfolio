@@ -1,9 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 const Works = () => {
-  return (
-    <div>Works</div>
-  )
-}
+  return <section className="w-full h-screen bg-black-1">Works</section>;
+};
 
-export default Works
+export default Works;
